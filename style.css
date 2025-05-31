@@ -2,40 +2,74 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to right, #fdfbfb, #ebedee);
+  background: #f0f4f8;
   color: #1e293b;
+  overflow-x: hidden;
 }
-.hero {
-  background: linear-gradient(145deg, #0f172a, #1e293b);
-  color: white;
+.animated-bg {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-45deg, #e3f2fd, #e0f7fa, #fce4ec, #fff3e0);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  z-index: -1;
+}
+@keyframes gradient {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+.container {
+  max-width: 960px;
+  margin: auto;
+  padding: 2rem;
+}
+header {
   text-align: center;
-  padding: 4rem 2rem;
+  margin-bottom: 3rem;
 }
-.hero h1 {
+header h1 {
   font-size: 2.5rem;
-  margin-bottom: 0.5rem;
 }
-.hero .highlight {
+.highlight {
   color: #3b82f6;
 }
 .button {
-  margin-top: 1rem;
+  display: inline-block;
   background: #3b82f6;
   color: white;
   padding: 0.5rem 1rem;
   text-decoration: none;
   border-radius: 8px;
+  margin-top: 1rem;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, background 0.3s ease;
+  cursor: pointer;
+}
+.card:hover {
+  transform: translateY(-5px);
+  background: #dbeafe;
 }
 section {
-  padding: 2rem;
+  margin-bottom: 2.5rem;
 }
-section h2 {
+h2 {
   font-size: 1.75rem;
   margin-bottom: 1rem;
-  color: #0f172a;
-}
-.job {
-  margin-bottom: 1.5rem;
+  text-align: center;
 }
 footer {
   text-align: center;
@@ -43,8 +77,4 @@ footer {
   background: #1e293b;
   color: white;
   font-size: 0.9rem;
-}
-footer a {
-  color: #3b82f6;
-  text-decoration: none;
 }
