@@ -8,60 +8,65 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="animated-bg"></div>
+  <div class="bg-animation"></div>
   <div class="container">
     <header>
-      <h1>Hello, I'm <span class="highlight">Akhilesh Pillai</span></h1>
-      <p>HR Executive | Pune, India</p>
-      <p>Email: <a href="mailto:akhi47963@gmail.com">akhi47963@gmail.com</a> | Phone: 9588653683</p>
-      <a href="https://linkedin.com/in/akhilesh-pillai-8522b222a" class="button" target="_blank">LinkedIn</a>
+      <div class="header-content">
+        <h1>Akhilesh Pillai</h1>
+        <p>HR Executive | Pune, India</p>
+        <p>Email: <a href="mailto:akhi47963@gmail.com">akhi47963@gmail.com</a> | 📞 9588653683</p>
+      </div>
+      <button class="toggle-mode" onclick="toggleMode()">🌙 Toggle Dark Mode</button>
     </header>
 
-    <section>
+    <section class="skills">
       <h2>Skills</h2>
-      <div class="cards">
+      <div class="skill-grid">
         <div class="card">Onboarding</div>
         <div class="card">HR Operations</div>
-        <div class="card">Stakeholder Communication</div>
+        <div class="card">Communication</div>
         <div class="card">Excel</div>
         <div class="card">Documentation</div>
-        <div class="card">Employee Engagement</div>
+        <div class="card">Engagement</div>
       </div>
     </section>
 
     <section>
       <h2>Experience</h2>
       <div class="job">
-        <h3>HR Executive – HD Hyundai (via Randstad)</h3>
+        <h3>HR Executive – HD Hyundai</h3>
         <p>Jan 2024 – Present</p>
         <ul>
-          <li>Managed onboarding lifecycle and communication for new hires</li>
-          <li>Maintained detailed HR trackers</li>
-          <li>Handled payroll, reimbursements, and contracts</li>
-        </ul>
-      </div>
-      <div class="job">
-        <h3>HR Intern – Aviruddha Productivity Pvt Ltd</h3>
-        <p>Sep 2022 – Dec 2022</p>
-        <ul>
-          <li>Supported recruitment efforts and policy communication</li>
+          <li>Managed onboarding lifecycle</li>
+          <li>Maintained HR trackers</li>
+          <li>Resolved documentation and payroll queries</li>
         </ul>
       </div>
     </section>
 
     <section>
-      <h2>Education & Certifications</h2>
+      <h2>Education</h2>
       <ul>
-        <li>MBA – HR | S.B Patil Institute, Pune</li>
-        <li>BSc – Computer Science | ATSS College</li>
-        <li>Data Analysis in Excel – CFI</li>
-        <li>Presentation with Macabacus – CFI</li>
+        <li>MBA – HR | S.B Patil Institute</li>
+        <li>BSc – CS | ATSS College</li>
       </ul>
     </section>
 
     <footer>
-      <p>© 2025 Akhilesh Pillai | Phone: 9588653683</p>
+      <p>© 2025 Akhilesh Pillai</p>
     </footer>
   </div>
+
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle("dark-mode");
+      localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
+    }
+    window.onload = () => {
+      if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark-mode");
+      }
+    }
+  </script>
 </body>
 </html>
