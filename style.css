@@ -12,7 +12,6 @@ body {
   background: var(--bg-light);
   color: var(--text-light);
   transition: background 0.5s, color 0.5s;
-  overflow-x: hidden;
 }
 body.dark {
   background: var(--bg-dark);
@@ -36,7 +35,7 @@ body.dark {
 .mode-toggle {
   position: fixed;
   top: 1rem;
-  left: 1rem;
+  right: 1rem;
   z-index: 100;
   background: var(--accent);
   color: white;
@@ -46,17 +45,16 @@ body.dark {
   cursor: pointer;
 }
 .block {
-  min-height: 100vh;
-  padding: 3rem 1.5rem;
+  min-height: 80vh;
+  padding: 2rem 1.5rem;
 }
 .headline {
-  font-size: 2.8rem;
-  margin-bottom: 1rem;
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
   animation: fadepop 1s ease;
 }
-@keyframes fadepop {
-  from { opacity: 0; transform: scale(0.9); }
-  to { opacity: 1; transform: scale(1); }
+.name {
+  color: var(--accent);
 }
 .intro-content {
   display: flex;
@@ -65,15 +63,19 @@ body.dark {
 }
 .contact-info, .summary {
   flex: 1;
-  min-width: 260px;
+  min-width: 280px;
+}
+.intro-text {
+  font-size: 1.3rem;
+  line-height: 1.8;
 }
 .skills-list {
   list-style: none;
   padding: 0;
+  font-size: 1.2rem;
 }
 .skills-list li {
-  margin: 0.4rem 0;
-  font-size: 1.1rem;
+  margin: 0.5rem 0;
 }
 .download {
   display: inline-block;
@@ -83,11 +85,12 @@ body.dark {
   padding: 0.6rem 1rem;
   border-radius: 6px;
   text-decoration: none;
+  font-size: 1.1rem;
 }
 footer {
   text-align: center;
   padding: 2rem;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 .fadein {
   opacity: 0;

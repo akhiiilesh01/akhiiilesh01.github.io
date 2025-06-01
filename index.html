@@ -14,15 +14,15 @@
 
   <section class="block" id="intro">
     <div class="intro-content">
+      <div class="summary">
+        <h1 class="headline">Hello, I'm <span class="name">Akhilesh Pillai</span></h1>
+        <p class="intro-text">I'm a dedicated and results-driven HR Executive passionate about streamlining employee onboarding, optimizing HR processes, and enhancing engagement. I thrive in fast-paced environments and believe in delivering meaningful HR experiences with empathy and precision.</p>
+      </div>
       <div class="contact-info">
         <h2>Contact</h2>
         <p><i class="fas fa-envelope"></i> <a href="mailto:akhi47963@gmail.com">akhi47963@gmail.com</a></p>
         <p><i class="fas fa-phone"></i> <a href="tel:+919588653683">+91 9588653683</a></p>
         <p><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/akhilesh-pillai-8522b222a" target="_blank">/akhilesh-pillai</a></p>
-      </div>
-      <div class="summary">
-        <h1 class="headline">Hello, I'm Akhilesh</h1>
-        <p>Proactive HR Executive experienced in onboarding, documentation, employee engagement, and HR operations. Known for streamlining HR processes and enhancing employee experience through proactive coordination and communication.</p>
       </div>
     </div>
   </section>
@@ -98,7 +98,6 @@
       document.body.classList.toggle("dark");
       localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
     }
-
     window.addEventListener("DOMContentLoaded", () => {
       if (localStorage.getItem("theme") === "dark") {
         document.body.classList.add("dark");
