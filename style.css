@@ -69,3 +69,22 @@ main {
   opacity: 1;
   transform: translateY(0);
 }
+body.light {
+  background-color: #ffffff;
+  color: #111111;
+}
+
+body.light h1,
+body.light h2 {
+  color: #1e3a8a;
+}
+
+body.light a {
+  color: #1d4ed8;
+}
+
+body.light .download,
+body.light .toggle {
+  background: #1e3a8a;
+  color: white;
+}
