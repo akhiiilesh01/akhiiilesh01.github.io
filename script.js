@@ -48,6 +48,9 @@ const observer = new IntersectionObserver(entries => {
 
 document.querySelectorAll('.fadein').forEach(el => observer.observe(el));
 
-function toggleMode() {
-  document.body.classList.toggle("light");
-}
+const toggleSwitch = document.getElementById('theme-switch');
+
+toggleSwitch.addEventListener('change', () => {
+  document.body.classList.toggle('light');
+});
+ 
