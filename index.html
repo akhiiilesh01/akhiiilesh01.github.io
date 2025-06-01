@@ -6,18 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Akhilesh Pillai | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 </head>
 <body>
-  <canvas id="bgCanvas"></canvas>
+  <div class="animated-bg"></div>
   <button class="mode-toggle" onclick="toggleMode()">🌙</button>
 
   <section class="block" id="intro">
     <div class="intro-content">
       <div class="contact-info">
         <h2>Contact</h2>
-        <p>Email: <a href="mailto:akhi47963@gmail.com">akhi47963@gmail.com</a></p>
-        <p>Phone: <a href="tel:+919588653683">+91 9588653683</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/akhilesh-pillai-8522b222a" target="_blank">/akhilesh-pillai</a></p>
+        <p><i class="fas fa-envelope"></i> <a href="mailto:akhi47963@gmail.com">akhi47963@gmail.com</a></p>
+        <p><i class="fas fa-phone"></i> <a href="tel:+919588653683">+91 9588653683</a></p>
+        <p><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/akhilesh-pillai-8522b222a" target="_blank">/akhilesh-pillai</a></p>
       </div>
       <div class="summary">
         <h1 class="headline">Hello, I'm Akhilesh</h1>
@@ -110,51 +111,6 @@
       }, { threshold: 0.2 });
       document.querySelectorAll('.fadein').forEach(el => observer.observe(el));
     });
-
-    // Canvas background animation
-    const canvas = document.getElementById('bgCanvas');
-    const ctx = canvas.getContext('2d');
-    let particles = [];
-
-    function resizeCanvas() {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    }
-    window.addEventListener('resize', resizeCanvas);
-    resizeCanvas();
-
-    function createParticles(count) {
-      particles = [];
-      for (let i = 0; i < count; i++) {
-        particles.push({
-          x: Math.random() * canvas.width,
-          y: Math.random() * canvas.height,
-          r: Math.random() * 2 + 1,
-          dx: (Math.random() - 0.5) * 0.5,
-          dy: (Math.random() - 0.2) * 0.5
-        });
-      }
-    }
-
-    function animateParticles() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      for (let p of particles) {
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(59, 130, 246, 0.3)';
-        ctx.fill();
-        p.x += p.dx;
-        p.y += p.dy;
-        if (p.x < 0 || p.x > canvas.width || p.y < 0 || p.y > canvas.height) {
-          p.x = Math.random() * canvas.width;
-          p.y = -10;
-        }
-      }
-      requestAnimationFrame(animateParticles);
-    }
-
-    createParticles(100);
-    animateParticles();
   </script>
 </body>
 </html>
