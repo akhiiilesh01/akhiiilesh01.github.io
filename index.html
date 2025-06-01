@@ -10,7 +10,13 @@
 </head>
 <body>
   <canvas id="bg-canvas"></canvas>
-  <button class="toggle" onclick="toggleMode()">🌓</button>
+ <div class="theme-switch-wrapper">
+  <input type="checkbox" id="theme-switch" class="theme-switch-checkbox">
+  <label for="theme-switch" class="theme-switch-label">
+    <span class="theme-switch-sun">☀️</span>
+    <span class="theme-switch-moon">🌙</span>
+  </label>
+</div>
 
   <div class="intro-container fadein">
     <div class="summary">
