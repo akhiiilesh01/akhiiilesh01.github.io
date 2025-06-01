@@ -6,61 +6,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Akhilesh Pillai | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <div class="animated-bg"></div>
-  <main>
-    <header class="fadein">
-      <h1>Akhilesh Pillai</h1>
-      <p>HR Executive | Onboarding | Documentation | Engagement</p>
-      <a href="Akhilesh_Pillai_Resume_31.05.pdf" download>📄 Download Resume</a>
-    </header>
+  <canvas id="bg-canvas"></canvas>
+  <button class="toggle" onclick="toggleMode()">🌓</button>
 
-    <section class="fadein"><h2>Skills</h2><ul>
-      <li>Onboarding</li><li>HR Operations</li><li>Excel</li>
-      <li>Stakeholder Communication</li><li>Employee Engagement</li>
-      <li>Documentation</li><li>Compliance</li>
-    </ul></section>
-
-    <section class="fadein"><h2>Experience</h2>
-      <p><strong>HD Hyundai (via Randstad)</strong> – HR Executive (Jan 2024 – Present)</p>
-      <ul><li>Onboarding, documentation, induction</li>
-      <li>Trackers for offers and reimbursements</li><li>Payroll coordination</li></ul>
-      <p><strong>Aviruddha Productivity Pvt Ltd</strong> – HR Intern (Sep 2022 – Dec 2022)</p>
-    </section>
-
-    <section class="fadein"><h2>Education</h2><ul>
-      <li>MBA – HR | S.B Patil Institute of Management (2021–2023)</li>
-      <li>BSc – Computer Science | ATSS College (2017–2020)</li>
-      <li>HSC – Jai Hind Junior College (2016)</li>
-      <li>SSC – Jai Hind High School (2014)</li>
-    </ul></section>
-
-    <section class="fadein"><h2>Languages</h2><ul>
-      <li>English</li><li>Hindi</li><li>Malayalam</li><li>Marathi</li>
-    </ul></section>
-
-    <section class="fadein"><h2>Certifications</h2><ul>
-      <li>Data Analysis in Excel – CFI</li>
-      <li>Presentation with Macabacus – CFI</li>
-    </ul></section>
-
-    <section class="fadein"><h2>Contact</h2>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Contact</h2>
       <p>📧 <a href="mailto:akhi47963@gmail.com">akhi47963@gmail.com</a></p>
       <p>📞 <a href="tel:+919588653683">+91 9588653683</a></p>
       <p>🔗 <a href="https://linkedin.com/in/akhilesh-pillai-8522b222a">LinkedIn</a></p>
-    </section>
-  </main>
+    </aside>
+    <main>
+      <section class="fadein">
+        <h1>Akhilesh Pillai</h1>
+        <p class="summary">HR Executive with hands-on experience in onboarding, employee engagement, and HR operations. Passionate about building positive work environments and streamlining HR processes with a focus on accuracy and efficiency.</p>
+      </section>
 
-  <script>
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('visible');
-        else entry.target.classList.remove('visible');
-      });
-    }, { threshold: 0.2 });
+      <section class="fadein"><h2>Skills</h2><ul>
+        <li>Onboarding</li><li>HR Operations</li><li>Excel</li>
+        <li>Stakeholder Communication</li><li>Employee Engagement</li>
+        <li>Documentation</li><li>Compliance</li>
+      </ul></section>
 
-    document.querySelectorAll('.fadein').forEach(el => observer.observe(el));
-  </script>
+      <section class="fadein"><h2>Experience</h2>
+        <p><strong>HD Hyundai (via Randstad)</strong> – HR Executive (Jan 2024 – Present)</p>
+        <ul><li>Onboarding, documentation, induction</li>
+        <li>Maintained HR trackers</li><li>Payroll coordination</li></ul>
+        <p><strong>Aviruddha Productivity Pvt Ltd</strong> – HR Intern (Sep 2022 – Dec 2022)</p>
+      </section>
+
+      <section class="fadein"><h2>Education</h2><ul>
+        <li>MBA – HR | S.B Patil Institute of Management (2021–2023)</li>
+        <li>BSc – Computer Science | ATSS College (2017–2020)</li>
+        <li>HSC – Jai Hind Junior College (2016)</li>
+        <li>SSC – Jai Hind High School (2014)</li>
+      </ul></section>
+
+      <section class="fadein"><h2>Languages</h2><ul>
+        <li>English</li><li>Hindi</li><li>Malayalam</li><li>Marathi</li>
+      </ul></section>
+
+      <section class="fadein"><h2>Certifications</h2><ul>
+        <li>Data Analysis in Excel – CFI</li>
+        <li>Presentation with Macabacus – CFI</li>
+      </ul></section>
+
+      <section class="fadein" id="resume">
+        <h2>Download Resume</h2>
+        <a class="download" href="Akhilesh_Pillai_Resume_31.05.pdf" download>📄 Click here to download</a>
+      </section>
+    </main>
+  </div>
 </body>
 </html>
